@@ -18,7 +18,7 @@
 		<div class="col-6">
 			<h1>Doctor Management </h1>
 			
-			<form id="formItem" name="formItem" method="post" action="Doctor.jsp">
+			<form id="formDoctor" name="formDoctor" method="post" action="Doctor.jsp">
 
 				Doctor Name:
 				<input id="Dname" name="Dname" type="text" class="form-control form-control-sm">
@@ -46,9 +46,9 @@
 		        
 		        Hospital Name:
 		        <input id="HospitalName" name="HospitalName" type="text" class="form-control form-control-sm">
-				
+				<br>
 				<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
-				<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
+				<input type="hidden" id="hidDoctorIDSave" name="hidDoctorIDSave" value="">
 				
 			</form>
 			

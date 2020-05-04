@@ -28,13 +28,13 @@ $(document).on("click", "#btnSave", function(event)
 	}
 	
 	// If valid------------------------
-	var method = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
+	var method = ($("#hidDoctorIDSave").val() == "") ? "POST" : "PUT";
 	
 	$.ajax(
 	{
 		url : "DoctorAPI",
 		type : method,
-		data : $("#formItem").serialize(),
+		data : $("#formDoctor").serialize(),
 		dataType : "text",
 		complete : function(response, status)
 		{
@@ -46,7 +46,7 @@ $(document).on("click", "#btnSave", function(event)
 //UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event)
 {
-	$("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIDUpdate').val());
+	$("#hidDoctorIDSave").val($(this).closest("tr").find('#hidDoctorIDUpdate').val());
 	$("#Dname").val($(this).closest("tr").find('td:eq(0)').text());
 	$("#Dreg").val($(this).closest("tr").find('td:eq(1)').text());
 	$("#Special").val($(this).closest("tr").find('td:eq(2)').text());
@@ -84,8 +84,8 @@ function onItemSaveComplete(response, status)
 		$("#alertError").show();
 	}
 	
-	$("#hidItemIDSave").val("");
-	$("#formItem")[0].reset();
+	$("#hidDoctorIDSave").val("");
+	$("#formDoctor")[0].reset();
 }
 
 $(document).on("click", ".btnRemove", function(event)
@@ -94,7 +94,7 @@ $(document).on("click", ".btnRemove", function(event)
 	{
 		url : "DoctorAPI",
 		type : "DELETE",
-		data : "doctorId=" + $(this).data("itemid"),
+		data : "doctorId=" + $(this).data("doctorid"),
 		dataType : "text",
 		complete : function(response, status)
 		{

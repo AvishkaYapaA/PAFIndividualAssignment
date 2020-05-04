@@ -109,7 +109,7 @@ public class Doctor {
 				String hospitalName = rs.getString("HospitalName");
 				
 				// Add into the html table
-				output += "<tr><td><input id='hidItemIDUpdate'name='hidItemIDUpdate' type='hidden' value='" + doctorId+ "'>" + dname + "</td>";
+				output += "<tr><td><input id='hidDoctorIDUpdate'name='hidDoctorIDUpdate' type='hidden' value='" + doctorId+ "'>" + dname + "</td>";
 				output += "<td>" + dRegNo + "</td>";
 				output += "<td>" + specialization + "</td>";
 				output += "<td>" + contactNo + "</td>";
@@ -121,7 +121,7 @@ public class Doctor {
 				output += "<td><input name='btnUpdate'type='button' "
 						+ "value='Update'class='btnUpdate btn btn-secondary'></td>"
 						+ "<td><input name='btnRemove'type='button' "
-						+ "value='Remove'class='btnRemove btn btn-danger'data-itemid='"+ doctorId + "'>" + "</td></tr>";
+						+ "value='Remove'class='btnRemove btn btn-danger'data-doctorid='"+ doctorId + "'>" + "</td></tr>";
 			}
 			
 			con.close();
@@ -176,7 +176,7 @@ public class Doctor {
 		}
 		catch (Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while updating the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while updating the Doctor.\"}";
 			System.err.println(e.getMessage());
 		}
 		
@@ -212,7 +212,7 @@ public class Doctor {
 		}
 		catch (Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while deleting the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while deleting the Doctor.\"}";
 			System.err.println(e.getMessage());
 		}
 		
