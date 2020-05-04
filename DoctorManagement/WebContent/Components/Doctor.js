@@ -152,11 +152,18 @@ function validateItemForm() {
     }
 
     // Doctor Specialization
-    if ($("#Special").val().trim() == "") {
+   /* if ($("#Special").val().trim() == "") {
 
         return "Insert the the spcialization of the doctor";
 
+    }*/
+    
+ // YEAR
+    if ($("#Special").val() == "0")
+    {
+    return "Select Specialization.";
     }
+
 
 
     // divDoctorGrid Password

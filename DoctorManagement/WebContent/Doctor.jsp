@@ -18,6 +18,7 @@
 		<div class="col-6">
 			<h1>Doctor Management </h1>
 			
+			
 			<form id="formDoctor" name="formDoctor" method="post" action="Doctor.jsp">
 
 				Doctor Name:
@@ -29,9 +30,18 @@
 				<br> 
 				
 				Specialization:
-		        <input id="Special" name="Special" type="text" class="form-control form-control-sm">
+		        <!-- <input id="Special" name="Special" type="text" class="form-control form-control-sm"> -->
 		        <br> 
-		        
+                <select id="Special" name="Special"  class="form-control form-control-sm">
+           			    <option value="0">--Select year--</option>
+ 						<option value="Allergists">Allergists</option>
+ 						<option value="Anesthesiologists">Anesthesiologists</option>
+ 						<option value="Cardiologists">Cardiologists</option>
+ 						<option value="Medicine Specialists"> Medicine Specialists</option>
+ 						<option value="Dermatologists">Dermatologists</option>
+ 						<option value=" Endocrinologists">Endocrinologists</option>
+				</select><br>
+                               
 		        Contact No`:
 		        <input id="ContactNo" name="ContactNo" type="text" class="form-control form-control-sm">
 	            <br> 
@@ -51,6 +61,7 @@
 				<input type="hidden" id="hidDoctorIDSave" name="hidDoctorIDSave" value="">
 				
 			</form>
+			
 			
 			<div id="alertSuccess" class="alert alert-success"></div>
 			<div id="alertError" class="alert alert-danger"></div>
