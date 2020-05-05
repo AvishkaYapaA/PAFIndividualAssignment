@@ -6,13 +6,12 @@ import DbConnect.DbConnect;
 public class Doctor {
 
 	
-	
 	public String insertDoctors( String dname, String dRegNo, String specialization, String contactNo, String address, String email, String hospitalName)
 	{
 		String output = "";
 		try
 		{
-
+				//singleton
 			Connection con = DbConnect.connect();
 			
 			if (con == null)
