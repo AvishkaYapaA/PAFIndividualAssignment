@@ -18,7 +18,7 @@ $(document).on("click", "#btnSave", function(event)
 	$("#alertError").hide();
 	
 	// Form validation-------------------
-	var status = validateItemForm();
+	var status = validateDoctorForm();
 	
 	if (status != true)
 	{
@@ -38,7 +38,7 @@ $(document).on("click", "#btnSave", function(event)
 		dataType : "text",
 		complete : function(response, status)
 		{
-			onItemSaveComplete(response.responseText, status);
+			onDoctorSaveComplete(response.responseText, status);
 		}
 	});
 });
@@ -56,7 +56,7 @@ $(document).on("click", ".btnUpdate", function(event)
 	$("#HospitalName").val($(this).closest("tr").find('td:eq(6)').text());
 });
 
-function onItemSaveComplete(response, status)
+function onDoctorSaveComplete(response, status)
 {
 	if (status == "success")
 	{
@@ -65,7 +65,7 @@ function onItemSaveComplete(response, status)
 		{
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divDoctorGrid").html(resultSet.data);
 		} 
 		else if (resultSet.status.trim() == "error")
 		{
@@ -98,12 +98,12 @@ $(document).on("click", ".btnRemove", function(event)
 		dataType : "text",
 		complete : function(response, status)
 		{
-			onItemDeleteComplete(response.responseText, status);
+			onDoctorDeleteComplete(response.responseText, status);
 		}
 	});
 });
 
-function onItemDeleteComplete(response, status)
+function onDoctorDeleteComplete(response, status)
 {
 	if (status == "success")
 	{
@@ -113,7 +113,7 @@ function onItemDeleteComplete(response, status)
 		{
 			$("#alertSuccess").text("Successfully deleted.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divDoctorGrid").html(resultSet.data);
 		} 
 		else if (resultSet.status.trim() == "error")
 		{
@@ -135,7 +135,7 @@ function onItemDeleteComplete(response, status)
 
 
 //Client Model
-function validateItemForm() {
+function validateDoctorForm() {
 
     // DoctorName
     if ($("#Dname").val().trim() == "") {
@@ -172,19 +172,20 @@ function validateItemForm() {
         return "Insert a numerical value for Contact Number.";
     }
 
-    
+    //Address Validation
     if ($("#Address").val().trim() == "") {
 
         return "Insert a Address";
 
     }
+    //Email Validation
     if ($("#Email").val().trim() == "" ) {
 
         return "Insert Doctor Email";
     }
     
     
-    
+    //Hospital Validation
     if ($("#HospitalName").val().trim() == "") {
 
         return "Insert a Hospital Name";

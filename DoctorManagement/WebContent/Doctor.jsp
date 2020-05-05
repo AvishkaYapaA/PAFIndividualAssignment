@@ -33,7 +33,7 @@
 		        <!-- <input id="Special" name="Special" type="text" class="form-control form-control-sm"> -->
 		        <br> 
                 <select id="Special" name="Special"  class="form-control form-control-sm">
-           			    <option value="0">--Select year--</option>
+           			    <option value="0">--Select Specialization--</option>
  						<option value="Allergists">Allergists</option>
  						<option value="Anesthesiologists">Anesthesiologists</option>
  						<option value="Cardiologists">Cardiologists</option>
@@ -67,7 +67,7 @@
 			<div id="alertError" class="alert alert-danger"></div>
 			<br>
 
-			<div id="divItemsGrid">
+			<div id="divDoctorGrid">
 				<%
 					Doctor DocObj = new Doctor();
 							out.print(DocObj.readDoctor());

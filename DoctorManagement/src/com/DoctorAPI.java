@@ -64,12 +64,12 @@ public class DoctorAPI extends HttpServlet {
 		//To reduce the worng details ,I added some replace codes
 		String output = DocObj.updateDoctor(paras.get("hidDoctorIDSave").toString(),
 										   paras.get("Dname").toString().replace("+"," "),
-										   paras.get("Dreg").toString(),
-										   paras.get("Special").toString().replace("+"," "),
+										   paras.get("Dreg").toString().replace("+"," "),
+										   paras.get("Special").toString(),
 										   paras.get("ContactNo").toString(),
 										   paras.get("Address").toString().replace("."," ").replace("+"," ").replace("%2C",","),
 										   paras.get("Email").toString().replace("%", "@").replace("40", ""),
-										   paras.get("HospitalName").toString());
+										   paras.get("HospitalName").toString().replace("+"," "));
 		
 		response.getWriter().write(output);
 	}

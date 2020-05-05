@@ -11,7 +11,7 @@ public class Doctor {
 		String output = "";
 		try
 		{
-				//singleton
+				
 			Connection con = DbConnect.connect();
 			
 			if (con == null)
