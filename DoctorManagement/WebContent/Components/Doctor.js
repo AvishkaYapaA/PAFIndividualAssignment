@@ -152,13 +152,6 @@ function validateItemForm() {
     }
 
     // Doctor Specialization
-   /* if ($("#Special").val().trim() == "") {
-
-        return "Insert the the spcialization of the doctor";
-
-    }*/
-    
- // YEAR
     if ($("#Special").val() == "0")
     {
     return "Select Specialization.";
@@ -166,23 +159,32 @@ function validateItemForm() {
 
 
 
-    // divDoctorGrid Password
+    //Contact No
     if ($("#ContactNo").val().trim() == "") {
 
         return "Insert a Contact No";
 
     }
+    // is numerical value
+    var tmpContactNo = $("#ContactNo").val().trim();
+    if (!$.isNumeric(tmpContactNo))
+    {
+        return "Insert a numerical value for Contact Number.";
+    }
+
     
     if ($("#Address").val().trim() == "") {
 
         return "Insert a Address";
 
     }
-    if ($("#Email").val().trim() == "") {
+    if ($("#Email").val().trim() == "" ) {
 
         return "Insert Doctor Email";
-
     }
+    
+    
+    
     if ($("#HospitalName").val().trim() == "") {
 
         return "Insert a Hospital Name";
@@ -192,3 +194,6 @@ function validateItemForm() {
     return true;
 
 }
+
+
+

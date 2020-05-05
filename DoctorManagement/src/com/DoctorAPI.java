@@ -61,13 +61,14 @@ public class DoctorAPI extends HttpServlet {
 		
 		Map paras = getParasMap(request);
 		
+		//To reduce the worng details ,I added some replace codes
 		String output = DocObj.updateDoctor(paras.get("hidDoctorIDSave").toString(),
-										   paras.get("Dname").toString(),
+										   paras.get("Dname").toString().replace("+"," "),
 										   paras.get("Dreg").toString(),
-										   paras.get("Special").toString(),
+										   paras.get("Special").toString().replace("+"," "),
 										   paras.get("ContactNo").toString(),
-										   paras.get("Address").toString(),
-										   paras.get("Email").toString(),
+										   paras.get("Address").toString().replace("."," ").replace("+"," ").replace("%2C",","),
+										   paras.get("Email").toString().replace("%", "@").replace("40", ""),
 										   paras.get("HospitalName").toString());
 		
 		response.getWriter().write(output);
