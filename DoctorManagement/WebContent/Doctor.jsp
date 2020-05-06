@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Management</title>
-
+ <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/Doctor.js"></script>
@@ -123,6 +123,12 @@ body {
 			<div id="alertSuccess" class="alert alert-success"></div>
 			<div id="alertError" class="alert alert-danger"></div>
 			<br>
+			</div>
+			
+			<div class="col-6">
+			<br><br>
+			 <center> <img src="image/doctor.png" width="400" height="400" ></img> </center>
+			</div>
 
 			<div id="divDoctorGrid">
 				<%
@@ -130,7 +136,7 @@ body {
 							out.print(DocObj.readDoctor());
 				%>
 			</div>
-		</div>
+		
 	</div>
 </div>
 
