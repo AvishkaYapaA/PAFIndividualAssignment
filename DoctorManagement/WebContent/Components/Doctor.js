@@ -182,7 +182,7 @@ function validateEmail($email) {
     
 	//length validate
 	if ($("#ContactNo").val().length > 10){
-		return "Only 10 Digits For mobile Number"
+		return "Only 10 Digits For Contact Numberr"
 	}
 	if ($("#ContactNo").val().length < 10){
 		return "Please enter 10 digits for Contact Number"
@@ -213,12 +213,6 @@ function validateEmail($email) {
 
 }
 
-//Scroll Button
-$("#buttonscroll").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#divDoctorGrid").offset().top
-    }, 1500);
-});
 
 
 
