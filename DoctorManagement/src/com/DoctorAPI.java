@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- * Servlet implementation class ItemsAPI
+ * Servlet implementation class DoctorAPI
  */
 @WebServlet("/DoctorAPI")
 public class DoctorAPI extends HttpServlet {
@@ -65,7 +65,7 @@ public class DoctorAPI extends HttpServlet {
 		String output = DocObj.updateDoctor(paras.get("hidDoctorIDSave").toString(),
 										   paras.get("Dname").toString().replace("+"," "),
 										   paras.get("Dreg").toString().replace("+"," "),
-										   paras.get("Special").toString(),
+										   paras.get("Special").toString().replace("+"," "),
 										   paras.get("ContactNo").toString(),
 										   paras.get("Address").toString().replace("."," ").replace("+"," ").replace("%2C",","),
 										   paras.get("Email").toString().replace("%", "@").replace("40", ""),

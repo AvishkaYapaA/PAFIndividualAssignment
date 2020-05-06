@@ -5,7 +5,7 @@ import DbConnect.DbConnect;
 
 public class Doctor {
 
-	
+	//Amarasekara A.S.Y
 	public String insertDoctors( String dname, String dRegNo, String specialization, String contactNo, String address, String email, String hospitalName)
 	{
 		String output = "";
