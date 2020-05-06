@@ -66,8 +66,8 @@ public class Doctor {
 			}
 			
 			// Prepare the html table to be displayed
-			output = "<table border='1'>"
-					+ "<tr><th>Doctor Name</th>"
+			output = "<table class='table' border='2'>"
+					+ "<tr class='thead-dark'><th>Doctor Name</th>"
 					+ "<th>Registration No</th>"
 					+ "<th>Specialization</th>"
 					+ "<th>Contact No</th>"
@@ -106,7 +106,7 @@ public class Doctor {
 			
 				// buttons
 				output += "<td><input name='btnUpdate'type='button' "
-						+ "value='Update'class='btnUpdate btn btn-secondary'></td>"
+						+ "value='Update'class='btnUpdate btn btn-success'></td>"
 						+ "<td><input name='btnRemove'type='button' "
 						+ "value='Remove'class='btnRemove btn btn-danger'data-doctorid='"+ doctorId + "'>" + "</td></tr>";
 			}
@@ -114,7 +114,7 @@ public class Doctor {
 			con.close();
 			
 			// Complete the html table
-			output += "</table>";
+			output += "</table >";
 			
 		}
 		catch (Exception e)

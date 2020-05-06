@@ -136,20 +136,30 @@ function onDoctorDeleteComplete(response, status)
 
 //Client Model
 function validateDoctorForm() {
+	
+function validateEmail($email) {
+	 var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	 return emailReg.test( $email );
+}
+
+
+
 
     // DoctorName
     if ($("#Dname").val().trim() == "") {
 
         return "Insert the Doctor Name";
-
     }
 
     // Doctor Registration No
-    if ($("#Dreg").val().trim() == "") {
-
-        return "Insert the Doctor Registration No.";
-
+    var tmpDreg = $("#Dreg").val().trim();
+    if (!$.isNumeric(tmpDreg))
+    {
+        return "Insert a numerical value for Doctor Registration Number";
     }
+    
+    
+
 
     // Doctor Specialization
     if ($("#Special").val() == "0")
@@ -157,14 +167,12 @@ function validateDoctorForm() {
     return "Select Specialization.";
     }
 
-
-
     //Contact No
     if ($("#ContactNo").val().trim() == "") {
 
         return "Insert a Contact No";
-
     }
+    
     // is numerical value
     var tmpContactNo = $("#ContactNo").val().trim();
     if (!$.isNumeric(tmpContactNo))
@@ -179,11 +187,12 @@ function validateDoctorForm() {
 
     }
     //Email Validation
-    if ($("#Email").val().trim() == "" ) {
-
-        return "Insert Doctor Email";
+    var tmpEmail = $("#Email").val().trim();
+    if ( !validateEmail(tmpEmail))
+    {
+        return "Insert the email correctly.";
     }
-    
+
     
     //Hospital Validation
     if ($("#HospitalName").val().trim() == "") {
@@ -191,10 +200,22 @@ function validateDoctorForm() {
         return "Insert a Hospital Name";
 
     }
-    
+
     return true;
 
 }
+
+//Scroll Button
+$("#buttonscroll").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#divDoctorGrid").offset().top
+    }, 1500);
+});
+
+
+
+
+
 
 
 
