@@ -5,7 +5,7 @@ import DbConnect.DbConnect;
 
 public class Doctor {
 
-	//Amarasekara A.S.Y
+	
 	public String insertDoctors( String dname, String dRegNo, String specialization, String contactNo, String address, String email, String hospitalName)
 	{
 		String output = "";
@@ -90,7 +90,7 @@ public class Doctor {
 				String dname = rs.getString("Dname");
 				String dRegNo = rs.getString("DRegNo");
 				String specialization = rs.getString("Specialization");
-				String contactNo = Integer.toString(rs.getInt("ContactNo"));
+				String contactNo =  rs.getString("ContactNo");
 				String address = rs.getString("Address");
 				String email = rs.getString("Email");
 				String hospitalName = rs.getString("HospitalName");
@@ -148,7 +148,7 @@ public class Doctor {
 					preparedStmt.setString(1, dname);
 					preparedStmt.setString(2, dRegNo);
 					preparedStmt.setString(3, specialization);
-					preparedStmt.setInt(4,Integer.parseInt(contactNo));
+					preparedStmt.setString(4,contactNo);
 					preparedStmt.setString(5, address);
 					preparedStmt.setString(6, email);
 					preparedStmt.setString(7, hospitalName);
