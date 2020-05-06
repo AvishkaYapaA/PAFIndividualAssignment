@@ -78,7 +78,7 @@ body {
 		   <br>
 		   
 		   <div class="form-group row">
-              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Contact No :</label>
+              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Contact No`:</label>
                 <div class="col-md-8">
                  <input id="ContactNo" name="ContactNo" type="text" class="form-control form-control-sm" maxlength="10">
                </div>
@@ -142,7 +142,6 @@ body {
 
 <script>
 
-//Scroll Button
     $("#buttonscroll").click(function() {
         $('html, body').animate({
             scrollTop: $("#divDoctorGrid").offset().top

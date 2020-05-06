@@ -179,6 +179,14 @@ function validateEmail($email) {
     {
         return "Insert a numerical value for Contact Number.";
     }
+    
+	//length validate
+	if ($("#ContactNo").val().length > 10){
+		return "Only 10 Digits For mobile Number"
+	}
+	if ($("#ContactNo").val().length < 10){
+		return "Please enter 10 digits for Contact Number"
+	}
 
     //Address Validation
     if ($("#Address").val().trim() == "") {
