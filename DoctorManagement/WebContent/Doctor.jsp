@@ -78,7 +78,7 @@ body {
 		   <br>
 		   
 		   <div class="form-group row">
-              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Contact No`:</label>
+              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Contact No :</label>
                 <div class="col-md-8">
                  <input id="ContactNo" name="ContactNo" type="text" class="form-control form-control-sm" maxlength="10">
                </div>
@@ -86,7 +86,7 @@ body {
 		   <br>
 		   
 		   <div class="form-group row">
-              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Address:</label>
+              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Address :</label>
                 <div class="col-md-8">
                 
            
@@ -96,7 +96,7 @@ body {
 		   <br>
 		   
 		   <div class="form-group row">
-              <label style="color: #0c0c0c;" class="col-md-4 control-label">Email:</label>
+              <label style="color: #0c0c0c;" class="col-md-4 control-label">Email :</label>
                 <div class="col-md-8">
                      <input id="Email" name="Email" type="text" class="form-control form-control-sm">
                </div>
@@ -104,7 +104,7 @@ body {
 		   <br>
 		   
 		    <div class="form-group row">
-              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Hospital Name:</label>
+              <label style="color: #0c0c0c;" class="col-md-4 control-label"> Hospital Name :</label>
                 <div class="col-md-8">
                     <input id="HospitalName" name="HospitalName" type="text" class="form-control form-control-sm">
                </div>
@@ -127,7 +127,7 @@ body {
 			
 			<div class="col-6">
 			<br><br>
-			 <center> <img src="image/doctor.png" width="400" height="400" ></img> </center>
+			 <center><img src="image/doctor.png" width="400" height="400" ></img> </center>
 			</div>
 
 			<div id="divDoctorGrid">
